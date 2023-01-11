@@ -7,10 +7,10 @@
     margin: 0;
     position: relative;
     padding: 20px;
-    background-color: #EEEEEE !important;
+    background-color: #EFB036 !important;
 }
 .header-nav {
-    background-color: #EEEEEE !important;
+    background-color: #EFB036 !important;
     display: flex;
 }
 .nav-title {
@@ -41,7 +41,7 @@ ul li {
     list-style: none;
 }
 .header-nav-menu ul li {
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid #c5922c;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -51,6 +51,7 @@ ul li {
     padding: 20px;
     font-size: 24px;
     text-align: center;
+    color: #8f0000;
 }
 .content-slider {
     height: 80vh;
@@ -139,7 +140,41 @@ ul li {
     border-radius: 100px;
     margin-bottom: 20px;
 }
-
+.content-products {
+    margin-top: 50px;
+}
+.ptoducts-table .categories {
+    display: flex;
+    justify-content: center;
+}
+.ptoducts-table .categories .cloth, .ptoducts-table .categories .shoes, .ptoducts-table .categories .bags, .ptoducts-table .categories .others{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px #75757562;
+}
+.products-btn {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+.products-btn a {
+    position: relative;
+    color: #272727;
+    font-weight: 500;
+    background-color: #EFB036;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+.products-btn a:hover {
+    text-decoration: underline;
+    color: #8f0000;
+    border: 2px solid #8f0000;
+}
 
 #menuOpenBtn {
     display: none;
@@ -159,6 +194,10 @@ ul li {
     text-decoration: underline;
     font-size: 0.95em;
 }
+.footer-nav a:hover {
+    text-decoration: underline;
+    color: #f30000;
+}
 .nav-contact-links {
     margin-left: 40px;
     margin-top: 30px;
@@ -169,4 +208,6 @@ ul li {
     align-items: center;
     color: #EEEEEE;
     border-top: 1px solid #808080;
+    font-size: 12px;
+    padding-top: 10px;
 }
