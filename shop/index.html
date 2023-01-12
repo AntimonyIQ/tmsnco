@@ -41,19 +41,62 @@
             </div>
 
             <div class="content-shop">
+                <h4 class="display-4">NEW PRODUCT:</h4>
+                <div class="shop-items">
+                    <div class="items-image">
+                        <img width="300" height="300" src="" alt="item_image" id="image" class="image">
+                    </div>
+                    <div class="items-name">
+                        <h3>Product Title</h3>
+                    </div>
+                    <div class="item-description">
+                        <p>--</p>
+                    </div>
+                    <div class="item-intrest">
+                        <div class="item-price">
+                            <p>$0.00</p>
+                        </div>
+                        <div class="item-cart">
+                            <img src="../assets/img/" alt="cart" id="cart">
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="display-4">ALL PRODUCT:</h4>
                 <table>
                     <thead>
                         <tr>
                             <td>ID</td>
-                            <td>Name</td>
-                            <td>Description</td>
-                            <td>Price</td>
+                            <td>Product Image</td>
+                            <td>Product Name/Price</td>
+                            <td>Cart</td>
                         </tr>
                     </thead>
-                    <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v2y8a976yzqov" >
+                    <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v2y8a976yzqov">
                         <tr>
-                            <td>{{id}} </td>
-                            <td>{{name}}</td>
+                            <td>
+                                <div class="all-id">
+                                    <p>{{id}}</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="all-img">
+                                    <img src="{{image}}" alt="all-img" id="all-image">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="all-name-price">
+                                    <div class="all-name">
+                                        <p>{{name}}</p>
+                                    </div>
+                                    <div class="all-price">
+                                        <p>{{pice}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button onclick=""><img src="../assets/img/menu.svg" alt="add cart"></button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

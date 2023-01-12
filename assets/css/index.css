@@ -65,22 +65,29 @@ ul li {
 }
 .slider-second {
     height: 80vh;
-    background-image: url("../img/img2.jpg");
+    background-image: url("../img/img5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
 }
-.content-slider .slider-first, .content-slider .slider-second {
+.slider-third {
+    height: 80vh;
+    background-image: url("../img/img4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+.content-slider .slider-first, .content-slider .slider-second, .content-slider .slider-third {
     color: #FFFFFF;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.content-slider .slider-first .slider-title, .content-slider .slider-second .slider-title {
+.content-slider .slider-first .slider-title, .content-slider .slider-second .slider-title, .content-slider .slider-third .slider-title {
     position: relative;
     top: 60px !important;
 }
-.content-slider .slider-first .slider-content, .content-slider .slider-second .slider-content {
+.content-slider .slider-first .slider-content, .content-slider .slider-second .slider-content, .content-slider .slider-third .slider-content {
     position: relative;
     top: 50px !important;
 }
@@ -102,13 +109,26 @@ ul li {
     padding: 20px;
 
 }
-.steps .step-one, .steps .step-two, .steps .step-three {
+.steps h4 {
+    margin-top: 50px;
+}
+.steps .step-zero, .steps .step-one, .steps .step-two, .steps .step-three {
     border: 1px solid #ccc;
     margin-top: 20px;
     padding: 20px 20px;
     border-radius: 12px;
     box-sizing: border-box;
     box-shadow: 0px 2px 4px rgba(255, 237, 202, 0.5);
+}
+.step-zero .step-zero-icon {
+    background-color: #FFCACA;
+    height: 92px;
+    width: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-bottom: 20px;
 }
 .step-one .step-one-icon {
     background-color: rgb(255, 237, 202);
@@ -211,4 +231,32 @@ ul li {
     border-top: 1px solid #808080;
     font-size: 12px;
     padding-top: 10px;
+}
+
+/* Shop Style */
+
+.content-shop {
+    padding: 20px;
+}
+.content-shop h4 {
+    font-size: xx-large;
+    font-weight: 400;
+    margin-top: 50px;
+    font-size: 24px;
+}
+.shop-items {
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px #6b6b6b80;
+}
+
+
+/* Abiut Style */
+
+.content-about {
+    padding: 20px;
+}
+.content-about h4 {
+    margin-top: 50px !important;
 }
