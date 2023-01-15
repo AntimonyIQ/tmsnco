@@ -11,7 +11,7 @@ console.log(ProductID);
 
 
 checkoutTable.innerHTML = '<table id="traditional-table" data-sheetdb-sort-by="id" data-sheetdb-sort-order="' + ProductID +'">'
-                            +'<tbody data-sheetdb-url="https://sheetdb.io/api/v1/v24gnnn8dqrqc">'
+                            +'<tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">'
                                 +'<tr>'
                                     +'<td>'
                                         +'<div class="table-view">'
