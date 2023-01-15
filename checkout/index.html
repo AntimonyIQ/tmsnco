@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | TMSnCO Lifestyle</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap.css">
+    <link rel="shortcut icon" href="../assets/img/no-name.ico" type="image/x-icon">
+    <script src="https://checkout.squadco.com/widget/squad.min.js"></script> 
+</head>
+<body>
+    
+    <div class="origin">
+        <div class="content">
+            <div class="content-header">
+                <div class="header-nav">
+                    <div class="nav-title">
+                        <div class="title-image">
+                            <img width="50" height="50" src="../assets/img/no-name.png" alt="TMSnCO Logo">
+                        </div>
+                        <div class="title-text">
+                            <h1>TMSnCO</h1>
+                        </div>
+                    </div>
+                    <div class="nav-content">
+                        <img width="50" height="50" id="menuCloseBtn" src="../assets/img/menu.svg" alt="Menu" onclick="return OpenNav();">
+                        <img width="50" height="50" id="menuOpenBtn" src="../assets/img/delete-sign.png" alt="Menu" onclick="return CloseNav();">
+                    </div>
+                </div>
+                <div class="header-nav-menu" id="header-nav-menu">
+                    <ul>
+                        <li><a class="home" href="../">Home</a></li>
+                        <li><a href="../shop/" class="shop">Shop</a></li>
+                        <li><a href="../products/" class="products">Products</a></li>
+                        <li><a href="../about/" class="about">About</a></li>
+                        <li><a href="mailto:tmsnco@gmail.com" class="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-checkout">
+                
+                <div class="checkout-header">
+                    <h5>make payments</h5>
+
+                    <div class="table-data" id="table-data">
+                        
+                    </div>
+                    
+                    <div class="chechout-form">
+                        <form class="text-center" style="padding-left: 30px; padding-right: 30px;">
+                            <div class="row text-center">
+                                <div class="col-lg-4">
+                                    <label for="email">Email address</label>
+                                    <input type="email" name="email-address" id="email-address" class="form-control" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="amount">Amount</label>
+                                    <input type="tel" name="amount" id="amount" class="form-control" required>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-submit"><br>
+                                        <button type="button" onclick="return SquadPay();" class="btn btn-warning">Check Out</button>
+                                    </div><br>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="content-footer">
+                <div class="footer-nav">
+                    <div class="nav-contact-info">
+                        <ul>
+                            <li>
+                                <h5>OUR STORE:</h5>
+                                <p><a href="#" class="map">Oregun, Ikeja Lagos</a></p>
+                            </li>
+                            <li>
+                                <h5>contact Us:</h5>
+                                <p><a href="mailto:olachi.somale@gmail.com" class="mail">olachi.somale@gmail.com</a></p>
+                            </li>
+                            <li>
+                                <h5>Call Us:</h5>
+                                <p><a href="tel:+2348034663035">0803-466-3035</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-contact-links">
+                        <h5>Useful Links:</h5>
+                        <ul>
+                            <li><a class="home" href="../">Home</a></li>
+                        <li><a href="../shop/" class="shop">Shop</a></li>
+                        <li><a href="../products/" class="products">Products</a></li>
+                        <li><a href="../about/" class="about">About</a></li>
+                        <li><a href="mailto:tmsnco@gmail.com" class="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copywright">
+                    &copy; 2023 - TMSnCO Lifestyle
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Libaries -->
+    <script src="../assets/css/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://sheetdb.io/handlebars.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

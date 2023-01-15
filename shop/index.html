@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="../assets/css/bootstrap/dist/css/bootstrap.css">
     <link rel="shortcut icon" href="../assets/img/no-name.ico" type="image/x-icon">
+    <script src="https://sheetdb.io/handlebars.js"></script>
 </head>
 <body>
     
@@ -18,15 +19,15 @@
                 <div class="header-nav">
                     <div class="nav-title">
                         <div class="title-image">
-                            <img width="70" height="70" src="../assets/img/no-name.png" alt="TMSnCO Logo">
+                            <img width="50" height="50" src="../assets/img/no-name.png" alt="TMSnCO Logo">
                         </div>
                         <div class="title-text">
                             <h1>TMSnCO</h1>
                         </div>
                     </div>
                     <div class="nav-content">
-                        <img width="70" height="70" id="menuCloseBtn" src="../assets/img/menu.svg" alt="Menu" onclick="return OpenNav();">
-                        <img width="70" height="70" id="menuOpenBtn" src="../assets/img/delete-sign.png" alt="Menu" onclick="return CloseNav();">
+                        <img width="50" height="50" id="menuCloseBtn" src="../assets/img/menu.svg" alt="Menu" onclick="return OpenNav();">
+                        <img width="50" height="50" id="menuOpenBtn" src="../assets/img/delete-sign.png" alt="Menu" onclick="return CloseNav();">
                     </div>
                 </div>
                 <div class="header-nav-menu" id="header-nav-menu">
@@ -41,7 +42,7 @@
             </div>
 
             <div class="content-shop">
-                <h4 class="display-4">NEW PRODUCT:</h4>
+                <h4 class="display-4">LATEST PRODUCT:</h4>
                 <div class="shop-items">
                     <div class="items-image">
                         <img width="300" height="300" src="" alt="item_image" id="image" class="image">
@@ -57,49 +58,132 @@
                             <p>$0.00</p>
                         </div>
                         <div class="item-cart">
-                            <img src="../assets/img/" alt="cart" id="cart">
+                            <img src="../assets/img/add-shopping-cart.png" alt="cart" id="cart">
                         </div>
                     </div>
                 </div>
 
-                <h4 class="display-4">ALL PRODUCT:</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Product Image</td>
-                            <td>Product Name/Price</td>
-                            <td>Cart</td>
-                        </tr>
-                    </thead>
-                    <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v2y8a976yzqov">
-                        <tr>
-                            <td>
-                                <div class="all-id">
-                                    <p>{{id}}</p>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="all-img">
-                                    <img src="{{image}}" alt="all-img" id="all-image">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="all-name-price">
-                                    <div class="all-name">
-                                        <p>{{name}}</p>
+                <div class="table-categ row">
+                    <h4 onclick="return AllTableBtn();" class="display-4" id="AllTable">All</h4>
+                    <h4 onclick="return TraditionalTableBtn();" class="display-4" id="TraditionalTable">Track Suit</h4>
+                    <h4 onclick="return WeddingTableBtn();" class="display-4" id="WeddingTable">Ankara</h4>
+                    <h4 onclick="return CasualTableBtn();" class="display-4" id="CasualTable">Adire</h4>
+                </div>
+                <div class="table-data">
+                    <table class="all-products-table" id="all-table">
+                        
+                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v24gnnn8dqrqc">
+                            <tr>
+                                <td>
+                                    <div class="table-view">
+                                        <div class="all-img">
+                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
+                                        </div>
+                                        <div class="all-name-price">
+                                            <div class="all-name">
+                                                <p>{{name}}</p>
+                                            </div>
+                                            <div class="all-description">
+                                                <p>{{description}}</p>
+                                            </div>
+                                            <div class="all-price">
+                                                <p>${{price}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="expand-product">
+                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
+                                        </div>
                                     </div>
-                                    <div class="all-price">
-                                        <p>{{pice}}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <table id="traditional-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="traditional">
+                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v24gnnn8dqrqc">
+                            <tr>
+                                <td>
+                                    <div class="table-view">
+                                        <div class="all-img">
+                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
+                                        </div>
+                                        <div class="all-name-price">
+                                            <div class="all-name">
+                                                <p>{{name}}</p>
+                                            </div>
+                                            <div class="all-description">
+                                                <p>{{description}}</p>
+                                            </div>
+                                            <div class="all-price">
+                                                <p>${{price}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="expand-product">
+                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td>
-                                <button onclick=""><img width="20" height="20" src="../assets/img/add-shopping-cart.png" alt="add cart"></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table id="wedding-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="wedding">
+                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v24gnnn8dqrqc">
+                            <tr>
+                                <td>
+                                    <div class="table-view">
+                                        <div class="all-img">
+                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
+                                        </div>
+                                        <div class="all-name-price">
+                                            <div class="all-name">
+                                                <p>{{name}}</p>
+                                            </div>
+                                            <div class="all-description">
+                                                <p>{{description}}</p>
+                                            </div>
+                                            <div class="all-price">
+                                                <p>${{price}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="expand-product">
+                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table id="casual-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="casual">
+                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/v24gnnn8dqrqc">
+                            <tr>
+                                <td>
+                                    <div class="table-view">
+                                        <div class="all-img">
+                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
+                                        </div>
+                                        <div class="all-name-price">
+                                            <div class="all-name">
+                                                <p>{{name}}</p>
+                                            </div>
+                                            <div class="all-description">
+                                                <p>{{description}}</p>
+                                            </div>
+                                            <div class="all-price">
+                                                <p>${{price}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="expand-product">
+                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div class="content-footer">
@@ -140,7 +224,6 @@
     
     <!-- Libaries -->
     <script src="../assets/css/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="https://sheetdb.io/handlebars.js"></script>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/shop.js"></script>
 </body>
