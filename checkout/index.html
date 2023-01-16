@@ -44,7 +44,7 @@
             <div class="content-checkout">
                 
                 <div class="checkout-header">
-                    <h5>make payments</h5>
+                    <h5 class="text-center">make payments</h5>
 
                     <div class="table-data" id="table-data">
                         
@@ -54,12 +54,16 @@
                         <form class="text-center" style="padding-left: 30px; padding-right: 30px;">
                             <div class="row text-center">
                                 <div class="col-lg-4">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                                <div class="col-lg-4">
                                     <label for="email">Email address</label>
                                     <input type="email" name="email-address" id="email-address" class="form-control" required>
                                 </div>
                                 <div class="col-lg-4">
                                     <label for="amount">Amount</label>
-                                    <input type="tel" name="amount" id="amount" class="form-control" required>
+                                    <input type="tel" name="amount" id="amount" class="form-control" required disabled value="">
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-submit"><br>

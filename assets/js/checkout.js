@@ -10,7 +10,7 @@ let ProductID = params.id;
 console.log(ProductID);
 
 
-checkoutTable.innerHTML = '<table id="traditional-table" data-sheetdb-sort-by="id" data-sheetdb-sort-order="' + ProductID +'">'
+checkoutTable.innerHTML = '<table id="all-products-table" data-sheetdb-sort-by="id" data-sheetdb-sort-order="' + ProductID +'">'
                             +'<tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">'
                                 +'<tr>'
                                     +'<td>'
@@ -29,13 +29,20 @@ checkoutTable.innerHTML = '<table id="traditional-table" data-sheetdb-sort-by="i
                                                     +'<p>{{description}}</p>'
                                                 +'</div>'
 
+                                                +'<form>'
+                                                    +'<div class="quantity">'
+                                                        +'<label for="quantity">Quantity</label>'
+                                                        +'<input type="tel" name="quantity" id="quantity" class="form-control" required value="1" placeholder="1">'
+                                                    +'</div>'
+                                                +'</form>'
+
                                                 +'<div class="all-price">'
                                                     +'<p>{{price}}</p>'
                                                 +'</div>'
                                             +'</div>'
 
                                             +'<div class="expand-product">'
-                                                +'<a class="text-center" href="../checkout/?id={{id}}">Update Cart</a>'
+                                                +'<button class="text-center" onclick="return UpdateCheckout();">Update checkout</button>'
                                             +'</div>'
 
                                         +'</div>'
@@ -44,7 +51,27 @@ checkoutTable.innerHTML = '<table id="traditional-table" data-sheetdb-sort-by="i
                             +'</tbody>'
                         +'</table>';
 
+document.getElementById('table-data').style.display = 'block';
+checkoutTable.style.display = 'flex';
+checkoutTable.style.justifyContent = 'center';
 
+var PayoutAmount = document.getElementById("amount");
+var ProductQuantity = document.getElementById("quantity");
+
+function UpdateCheckout() {
+    let IntergerValueqUantity = parseInt(ProductQuantity.value);
+    try {
+        if (IntergerValueqUantity < 1) {
+            alert("Please select a valid quantity");
+            ProductQuantity.value = 1;
+            PayoutAmount.value = '{{amount}}';
+        } else {
+            PayoutAmount.value = IntergerValueqUantity;
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 function SquadPay() {
     const squadInstance = new squad({

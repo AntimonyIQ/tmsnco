@@ -341,7 +341,7 @@ ul li {
     justify-content: center;
     align-items: center;
 }
-.expand-product a {
+.expand-product a, .expand-product button {
     position: relative;
     background-color: #EFB036;
     padding: 10px 20px;
@@ -354,6 +354,15 @@ ul li {
     background-color: #a87e29;
     color: #eeeeee;
     text-decoration: none;
+}
+.all-properties {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.properties-color, .properties-quantity, .properties-status {
+    position: relative;
+    padding: 10px 20px;
 }
 
 #traditional-table, #wedding-table, #casual-table {
@@ -372,5 +381,7 @@ ul li {
 
 /* Checkout Style */
 
-
+.checkout-header {
+    margin-top: 30px !important;
+}
 
