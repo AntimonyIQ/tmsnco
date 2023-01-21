@@ -1,0 +1,305 @@
+[
+    {
+        "id":"1",
+        "product_name":"Native Adire",
+        "product_des":"Along our way through the analysis of the two problems above, several interesting applications will be presented.",
+        "product_status":"Available",
+        "product_stock":"9",
+        "product_color":"blue",
+        "product_size": [
+                    10,
+                    16,
+                    18
+                    ],
+        "product_categorie":"adire",
+        "product_price":{
+            "NGN":"#13,000",
+            "USD":"24.99",
+            "CAD":"73.00"
+        },
+        "product_discount":"0",
+        "product_image":"../assets/img/img5.jpg"
+    },
+    {
+        "id":"2",
+        "product_name":"Native Ankara",
+        "product_des":"Along our way through the analysis of the two problems above, several interesting applications will be presented.",
+        "product_status":"Available",
+        "product_stock":"12",
+        "product_color":"dark blue",
+        "product_size": [
+                    12,
+                    14,
+                    16
+                    ],
+        "product_categorie":"ankara",
+        "product_price":{
+            "NGN":"#13,000",
+            "USD":"18.99",
+            "CAD":"67.00"
+        },
+        "product_discount":"0",
+        "product_image":"../assets/img/img1.jpg"
+    },
+    {
+        "id": "3",
+        "product_name": "Tracksuit",
+        "product_des": "Along our way through the analysis of the two problems above, several interesting applications will be presented.",
+        "product_status": "Available",
+        "product_stock": "24",
+        "product_color": "purple",
+        "product_size": [
+                    12,
+                    14,
+                    16
+                    ],
+        "product_categorie":"suit",
+        "product_price": {
+            "NGN": "#12,000",
+            "USD": "23.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/img4.jpg"
+    },
+    {
+        "id": "4",
+        "product_name": "Smart Adire",
+        "product_des": "Along our way through the analysis of the two problems above, several interesting applications will be presented.",
+        "product_status": "Available",
+        "product_stock": "12",
+        "product_color": "yellow",
+        "product_size": [
+                    12,
+                    14,
+                    16
+                    ],
+        "product_categorie": "adire",
+        "product_price": {
+            "NGN": "#15,000",
+            "USD": "33.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img12.jpg"
+    },
+    {
+    "id": "5",
+    "product_name": "Dress Tracksuit",
+    "product_des": "This blue dress tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+    "product_status": "Available",
+    "product_stock": "13",
+    "product_color": "blue",
+    "product_size": [
+            12,
+            14,
+            16
+            ],
+    "product_categorie": "suit",
+    "product_price": {
+        "NGN": "13,000",
+        "USD": "12.99",
+        "CAD": "54.00"
+    },
+    "product_discount": "0",
+    "product_image": "../assets/img/products/img1.jpg"
+    },
+    {
+        "id": "6",
+        "product_name": "Jacket Tracksuit",
+        "product_des": "This colorful jacket tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "blue",
+        "product_size": [
+                12,
+                14,
+                16,
+                18
+                ],
+        "product_categorie": "suit",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img2.jpg"
+    },
+    {
+        "id": "7",
+        "product_name": "pink Tracksuit",
+        "product_des": "This pink tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "pink",
+        "product_size": [
+                12,
+                14,
+                16,
+                18
+                ],
+        "product_categorie": "suit",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img3.jpg"
+    },
+    {
+        "id": "8",
+        "product_name": "Tracksuit",
+        "product_des": "This light orange tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "light orange",
+        "product_size": [
+                12,
+                14,
+                16,
+                18
+                ],
+        "product_categorie": "suit",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img4.jpg"
+    },
+    {
+        "id": "9",
+        "product_name": "Gown Ankara",
+        "product_des": "This orange gown is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "orange",
+        "product_size": [
+                12,
+                14,
+                16,
+                18
+                ],
+        "product_categorie": "ankara",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img5.jpg"
+    },
+    {
+        "id": "10",
+        "product_name": "Wine Tracksuit",
+        "product_des": "This wine tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "wine",
+        "product_size": [
+                    12,
+                    14,
+                    16,
+                    18
+                    ],
+        "product_categorie": "suit",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img6.jpg"
+    },
+    {
+        "id": "11",
+        "product_name": "Ankara Overall",
+        "product_des": "This ankara overall is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "mixed",
+        "product_size": [
+                    12,
+                    14,
+                    16,
+                    18
+                    ],
+        "product_categorie": "ankara",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img7.jpg"
+    },
+    {
+        "id": "12",
+        "product_name": "Smart Adire",
+        "product_des": "This green adire design is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "green",
+        "product_size": [
+                    12,
+                    14,
+                    16,
+                    18
+                    ],
+        "product_categorie": "adire",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img8.jpg"
+    },
+    {
+        "id": "13",
+        "product_name": "Ankara overall",
+        "product_des": "This colorful ankara is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "mixed",
+        "product_size": [
+                    12,
+                    14,
+                    16,
+                    18
+                    ],
+        "product_categorie": "ankara",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img9.jpg"
+    },
+    {
+        "id": "14",
+        "product_name": " Summer Ankara Jacket",
+        "product_des": "This summer jacker is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+        "product_status": "Available",
+        "product_stock": "28",
+        "product_color": "mixed",
+        "product_size": [
+                    12,
+                    14,
+                    16,
+                    18
+                    ],
+        "product_categorie": "ankara",
+        "product_price": {
+            "NGN": "13,000",
+            "USD": "12.99",
+            "CAD": "67.00"
+        },
+        "product_discount": "0",
+        "product_image": "../assets/img/products/img10.jpg"
+    }
+]

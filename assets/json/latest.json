@@ -1,0 +1,21 @@
+{
+    "id":"1",
+    "product_name":"Dress Tracksuit",
+    "product_des":"This blue dress tracksuit is made fo soft comfortable fabric. it features two side pockets. it is both machine washable and hand for easy care. it is available in various sizes",
+    "product_status":"Available",
+    "product_stock":"13",
+    "product_color":"red",
+    "product_size":[
+        12,
+        14,
+        16
+        ],
+    "product_categorie":"suit",
+    "product_price":{
+        "NGN":"13,000",
+        "USD":"12.99",
+        "CAD":"54.00"
+    },
+    "product_discount":"0",
+    "product_image":"../assets/img/products/img1.jpg"
+}
