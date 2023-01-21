@@ -44,189 +44,47 @@
             <div class="content-shop">
                 <h4 class="display-4">LATEST PRODUCT:</h4>
                 <div class="shop-items">
-                    <div class="items-image">
-                        <img width="300" height="300" src="" alt="item_image" id="image" class="image">
+                    <div class="items-image" id="latest_image">
+                        <img width="300" height="300" src="" alt="item_image" id="latestImage" class="image">
                     </div>
                     <div class="items-name">
-                        <h3>Product Title</h3>
+                        <h3 id="latestTitle">--</h3>
                     </div>
                     <div class="item-description">
-                        <p>--</p>
+                        <p id="latestDes">--</p>
                     </div>
                     <div class="item-intrest">
                         <div class="item-price">
-                            <p>$0.00</p>
+                            <p id="latestPrice">--</p>
                         </div>
-                        <div class="item-cart">
-                            <img src="../assets/img/add-shopping-cart.png" alt="cart" id="cart">
+                        <div class="item-cart" id="LatestCheckout">
+                            <a id="latest-checkout" href="">BUY</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="table-categ row">
                     <h4 onclick="return AllTableBtn();" class="display-4" id="AllTable">All</h4>
-                    <h4 onclick="return TraditionalTableBtn();" class="display-4" id="TraditionalTable">Track Suit</h4>
-                    <h4 onclick="return WeddingTableBtn();" class="display-4" id="WeddingTable">Ankara</h4>
-                    <h4 onclick="return CasualTableBtn();" class="display-4" id="CasualTable">Adire</h4>
+                    <h4 onclick="return TrackSuitBtn();" class="display-4" id="TraditionalTable">Track Suit</h4>
+                    <h4 onclick="return AnkaraBtn();" class="display-4" id="WeddingTable">Ankara</h4>
+                    <h4 onclick="return AdireBtn();" class="display-4" id="CasualTable">Adire</h4>
                 </div>
-                <div class="table-data">
-                    <table class="all-products-table" id="all-table">
-                        
-                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">
-                            <tr>
-                                <td>
-                                    <div class="table-view">
-                                        <div class="all-img">
-                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
-                                        </div>
-                                        <div class="all-name-price">
-                                            <div class="all-name">
-                                                <p>{{name}}</p>
-                                            </div>
-                                            <div class="all-description">
-                                                <p>{{description}}</p>
-                                            </div>
-                                            <div class="all-properties">
-                                                <div class="properties-color">
-                                                    <p>Color: {{color}}</p>
-                                                </div>
-                                                <div class="properties-status">
-                                                    <p>Status: {{status}}</p>
-                                                </div>
-                                                <div class="properties-stock">
-                                                    <p>Stock: {{stock}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="all-price">
-                                                <p>${{price}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="expand-product">
-                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-
-                    <table id="traditional-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="traditional">
-                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">
-                            <tr>
-                                <td>
-                                    <div class="table-view">
-                                        <div class="all-img">
-                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
-                                        </div>
-                                        <div class="all-name-price">
-                                            <div class="all-name">
-                                                <p>{{name}}</p>
-                                            </div>
-                                            <div class="all-description">
-                                                <p>{{description}}</p>
-                                            </div>
-                                            <div class="all-properties">
-                                                <div class="properties-color">
-                                                    <p>Color: {{color}}</p>
-                                                </div>
-                                                <div class="properties-status">
-                                                    <p>Status: {{status}}</p>
-                                                </div>
-                                                <div class="properties-stock">
-                                                    <p>Stock: {{stock}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="all-price">
-                                                <p>${{price}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="expand-product">
-                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table id="wedding-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="wedding">
-                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">
-                            <tr>
-                                <td>
-                                    <div class="table-view">
-                                        <div class="all-img">
-                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
-                                        </div>
-                                        <div class="all-name-price">
-                                            <div class="all-name">
-                                                <p>{{name}}</p>
-                                            </div>
-                                            <div class="all-description">
-                                                <p>{{description}}</p>
-                                            </div>
-                                            <div class="all-properties">
-                                                <div class="properties-color">
-                                                    <p>Color: {{color}}</p>
-                                                </div>
-                                                <div class="properties-status">
-                                                    <p>Status: {{status}}</p>
-                                                </div>
-                                                <div class="properties-stock">
-                                                    <p>Stock: {{stock}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="all-price">
-                                                <p>${{price}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="expand-product">
-                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table id="casual-table" data-sheetdb-sort-by="categorie" data-sheetdb-sort-order="casual">
-                        <tbody data-sheetdb-url="https://sheetdb.io/api/v1/w4d8ogt69y7bx">
-                            <tr>
-                                <td>
-                                    <div class="table-view">
-                                        <div class="all-img">
-                                            <img width="300" height="300" src="{{image}}" alt="all-img" id="all-image">
-                                        </div>
-                                        <div class="all-name-price">
-                                            <div class="all-name">
-                                                <p>{{name}}</p>
-                                            </div>
-                                            <div class="all-description">
-                                                <p>{{description}}</p>
-                                            </div>
-                                            <div class="all-properties">
-                                                <div class="properties-color">
-                                                    <p>Color: {{color}}</p>
-                                                </div>
-                                                <div class="properties-status">
-                                                    <p>Status: {{status}}</p>
-                                                </div>
-                                                <div class="properties-stock">
-                                                    <p>Stock: {{stock}}</p>
-                                                </div>
-                                            </div>
-                                            <div class="all-price">
-                                                <p>${{price}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="expand-product">
-                                            <a class="text-center" href="../checkout/?id={{id}}">buy</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                
+                <div class="table-data" id="table-data">
+                    
+                    
+                </div>
+                <div class="table-data" id="Table1">
+                    
+                </div>
+                <div class="table-data" id="Table2">
+                    
+                </div>
+                <div class="table-data" id="Table3">
+                
+                </div>
+                <div class="table-data" id="Table4">
+                
                 </div>
             </div>
 
