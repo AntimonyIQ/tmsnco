@@ -1,4 +1,4 @@
-var url = 'http://localhost:7700/tmsnco-master/assets/json/all.json';
+var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
 
 var checkoutTable = document.getElementById("table-data");
 const params = new Proxy(new URLSearchParams(window.location.search), {
