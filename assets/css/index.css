@@ -371,9 +371,10 @@ ul li {
     border-top: 1px solid #818181;
     border-bottom: 1px solid #818181;
 }
-.properties-color, .properties-quantity, .properties-status {
+.properties-color, .properties-quantity, .properties-status, .properties-stock {
     position: relative;
-    padding: 10px 20px;
+    padding-right: 15px;
+    padding-top: 15px
 }
 .item-price p {
     font-size: 44px;
@@ -395,6 +396,10 @@ ul li {
     color: #3F2B00;
     font-weight: 600;
 }
+#latestImage {
+    height: 50vh;
+    border-radius: 24px;
+}
 
 
 /* About Style */
@@ -410,6 +415,34 @@ ul li {
 
 .checkout-header {
     margin-top: 80px !important;
+}
+.chechout-form form {
+    margin: 20px;
+    border-radius: 24px;
+    padding: 20px;
+    background-color: #FFD48D;
+}
+.col-lg-4 label {
+    float: left;
+    margin-top: 5px;
+}
+.col-lg-4 #amount {
+    background-color: #FFD48D;
+    border: 0;
+    color: #955D00;
+    font-weight: 600;
+    font-size: 3em;
+    padding-left: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.paymnt {
+    background-color: #EFB036;
+    border: 0;
+    border-radius: 8px;
+    color: #53390F;
+    width: 99%;
+    padding: 10px 20px;
+    font-weight: 500;
 }
 
 /* Products page */
