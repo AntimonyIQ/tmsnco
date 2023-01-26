@@ -1,5 +1,5 @@
-var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
-var url_latest = 'https://antimonyiq.github.io/tmsnco/assets/json/latest.json'
+var url = 'http://localhost:7700/tmsnco-master/assets/json/all.json';
+var url_latest = 'http://localhost:7700/tmsnco-master/assets/json/latest.json'
 
 var shopTables = document.getElementById('table-data');
 var shopTableAll = document.getElementById('Table1');
@@ -35,7 +35,7 @@ fetch(url_latest)
         LatestImage.innerHTML = '$' + latest_data.product_price.CAD + '<span style="font-size: 14px; color: #808080;">CAD</span>';
         LatestDes.innerHTML = latest_data.product_des;
         LatestTitle.innerHTML = latest_data.product_name;
-        latestImg.innerHTML = '<img width="300" height="300" src="' + latest_data.product_image + '" alt="item_image" id="latestImage" class="image">';
+        latestImg.innerHTML = '<img src="' + latest_data.product_image + '" alt="item_image" id="latestImage" class="image">';
         LatestCheckout.innerHTML = '<a href="../checkout/?id=' + latest_data.id + '&price=' + latest_data.product_price.CAD + '">BUY IT NOW</a>'
     })
 
@@ -60,8 +60,8 @@ fetch(url)
                                 +'<div class="all-id" style="display: none;">'
                                     +'<input type="tel" name="productID" id="productID" value="">'
                                 +'</div>'
-                                +'<div class="all-img" id="all-image"  >'
-                                    +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                +'<div class="all-img" id="all-image" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                
                                 +'</div>'
                                 +'<div class="all-name-price">'
                                     +'<div class="all-name">'
@@ -128,8 +128,8 @@ function AllTableBtn() {
                                 +'<div class="all-id" style="display: none;">'
                                     +'<input type="tel" name="productID" id="productID" value="">'
                                 +'</div>'
-                                +'<div class="all-img">'
-                                    +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                                    
                                 +'</div>'
                                 +'<div class="all-name-price">'
                                     +'<div class="all-name">'
@@ -199,8 +199,8 @@ function TrackSuitBtn() {
                                 +'<div class="all-id" style="display: none;">'
                                     +'<input type="tel" name="productID" id="productID" value="">'
                                 +'</div>'
-                                +'<div class="all-img">'
-                                    +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                                    
                                 +'</div>'
                                 +'<div class="all-name-price">'
                                     +'<div class="all-name">'
@@ -271,8 +271,8 @@ function AnkaraBtn() {
                                 +'<div class="all-id" style="display: none;">'
                                     +'<input type="tel" name="productID" id="productID" value="">'
                                 +'</div>'
-                                +'<div class="all-img">'
-                                    +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                                    
                                 +'</div>'
                                 +'<div class="all-name-price">'
                                     +'<div class="all-name">'
@@ -346,8 +346,8 @@ function AdireBtn() {
                                 +'<div class="all-id" style="display: none;">'
                                     +'<input type="tel" name="productID" id="productID" value="">'
                                 +'</div>'
-                                +'<div class="all-img">'
-                                    +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                                    
                                 +'</div>'
                                 +'<div class="all-name-price">'
                                     +'<div class="all-name">'

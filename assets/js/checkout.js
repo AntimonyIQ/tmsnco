@@ -1,4 +1,4 @@
-var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
+var url = 'http://localhost:7700/tmsnco-master/assets/json/all.json';
 
 var checkoutTable = document.getElementById("table-data");
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -28,8 +28,8 @@ fetch(url)
                                     +'<td>'
                                         +'<div class="table-view">'
 
-                                            +'<div class="all-img">'
-                                                +'<img width="300" height="300" src="' + data[i].product_image + '" alt="all-img" id="all-image">'
+                                            +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+
                                             +'</div>'
 
                                             +'<div class="all-name-price">'
@@ -89,7 +89,7 @@ let InIntergerValuePrice = parseFloat(PriceID);
     
 function UpdateCheckout() {
     // let IntergerValueqUantity = parseInt(ProductQuantity.value);
-    let InIntergerValuePrice = parseFloat(PriceID);
+    let InIntergerValuePrice = parseInt(PriceID) + '.00';
     PayoutAmount.value = InIntergerValuePrice;
     /* 
     
@@ -117,7 +117,7 @@ function SquadPay() {
       onClose: () => console.log("Widget closed"),
       onLoad: () => console.log("Widget loaded successfully"),
       onSuccess: () => console.log("Linked successfully"),
-      key: "pk_3644cf8dc6dd5c86e61a77cf630f91e62173caa7",
+      key: "sandbox_pk_7e75ad7aa1ecce1f589361edbf2bc850",
       //Change key (test_pk_sample-public-key-1) to the key on your Squad Dashboard
       email: document.getElementById("email-address").value,
       amount: document.getElementById("amount").value * 100,
