@@ -1,5 +1,5 @@
-var url = 'http://localhost:7700/tmsnco-master/assets/json/all.json';
-var url_latest = 'http://localhost:7700/tmsnco-master/assets/json/latest.json'
+var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
+var url_latest = 'https://antimonyiq.github.io/tmsnco/assets/json/latest.json'
 
 var shopTables = document.getElementById('table-data');
 var shopTableAll = document.getElementById('Table1');

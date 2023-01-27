@@ -1,4 +1,4 @@
-var url = 'http://localhost:7700/tmsnco-master/assets/json/all.json';
+var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
 
 var checkoutTable = document.getElementById("table-data");
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -117,7 +117,7 @@ function SquadPay() {
       onClose: () => console.log("Widget closed"),
       onLoad: () => console.log("Widget loaded successfully"),
       onSuccess: () => console.log("Linked successfully"),
-      key: "sandbox_pk_7e75ad7aa1ecce1f589361edbf2bc850",
+      key: "pk_3644cf8dc6dd5c86e61a77cf630f91e62173caa7",
       //Change key (test_pk_sample-public-key-1) to the key on your Squad Dashboard
       email: document.getElementById("email-address").value,
       amount: document.getElementById("amount").value * 100,
