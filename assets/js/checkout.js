@@ -122,7 +122,7 @@ function SquadPay() {
       email: document.getElementById("email-address").value,
       amount: document.getElementById("amount").value * 100,
       //Enter amount in Naira or Dollar (Base value Kobo/cent already multiplied by 100)
-      currency_code: "NGN"
+      currency_code: "USD"
     });
     squadInstance.setup();
     squadInstance.open();
