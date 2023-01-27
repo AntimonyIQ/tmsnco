@@ -10,6 +10,11 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 let ProductID = params.id;
 let PriceID = params.price;
 
+var tbl = document.getElementById('tbl');
+var AllName = document.getElementById('AllName');
+var AllDescription = document.getElementById('AllDescription');
+var AllPrice = document.getElementById('AllPrice');
+
 
 fetch(url)
    .then(function(response) { 
@@ -21,56 +26,18 @@ fetch(url)
         for (var i = 0; i < data.length; i++) {
             if (data[i].id == ProductID) {
                 console.log(data[i].product_size);
-                checkoutTable.innerHTML = 
-                        '<table>'
-                            +'<tbody>'
-                                +'<tr>'
-                                    +'<td>'
-                                        +'<div class="table-view">'
-
-                                            +'<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
-
-                                            +'</div>'
-
-                                            +'<div class="all-name-price">'
-                                                +'<div class="all-name">'
-                                                    +'<p>' + data[i].product_name + '</p>'
-                                                +'</div>'
-
-                                                +'<div class="all-description">'
-                                                    +'<p>' + data[i].product_des + '</p>'
-                                                +'</div>'
-
-                                                +'<form>'
-                                                    +'<div class="quantity">'
-                                                        +'<label for="quantity">Quantity</label>'
-                                                        +'<input type="tel" name="quantity" id="quantity" class="form-control" value="" placeholder="1 - ' + data[i].product_stock + '" maxlength="2">'
-                                                    +'</div>'
-                                                    
-                                                    +'<div class="size">'
-                                                        +'<label for="size">Size</label>'
-                                                        +'<input type="tel" name="size" id="size" class="form-control" value="" placeholder="' + data[i].product_size[0] + ', ' + data[i].product_size[1] + ', ' + data[i].product_size[2] + '" maxlength="2">'
-                                                    +'</div>'
-                                                +'</form>'
-
-                                                +'<div class="all-price">'
-                                                    +'<p>$' + data[i].product_price.CAD + '<span style="font-size: 14px; color: #808080;">CAD</span>' + '</p>'
-                                                +'</div>'
-                                            +'</div>'
-
-                                            +'<div class="expand-product">'
-                                                +'<button class="text-center" onclick="return UpdateCheckout();">Update checkout</button>'
-                                            +'</div>'
-
-                                        +'</div>'
-                                    +'</td>'
-                                +'</tr>'
-                            +'</tbody>'
-                        +'</table>';
+                tbl.innerHTML = '<div class="all-img" style="height: 50vh; background-image: url(' + data[i].product_image + '); background-repeat: no-repeat; background-size: cover;">'
+                                
+                                +'</div>';
+                                
+                AllName.innerHTML = data[i].product_name;
+                AllDescription.innerHTML = data[i].product_des;
+                                    
+                AllPrice.innerHTML = '$' + data[i].product_price.CAD + '<span style="font-size: 14px; color: #808080;">CAD</span>';
             }
         }
         
-        
+
   })
 
 
@@ -80,37 +47,35 @@ document.getElementById('table-data').style.display = 'block';
 checkoutTable.style.display = 'flex';
 checkoutTable.style.justifyContent = 'center';
 
-var PayoutAmount = document.getElementById("amount");
-var ProductQuantity = document.getElementById("quantity");
 
-console.log('lex: ' + ProductQuantity.value);
-let InIntergerValuePrice = parseFloat(PriceID);
-    PayoutAmount.value = InIntergerValuePrice;
+let IntergerValuePrice = parseFloat(PriceID);
+var GetQuantity = document.getElementById('quantityx');
+var GetSize = document.getElementById('sizex');
+var PayAmount = document.getElementById('amount');
+
+function UpdateCheckout(arg) {
+    // body...
+    let IntGetQuantity = parseInt(GetQuantity.value);
+    let IntGetSize = parseInt(GetSize.value);
     
-function UpdateCheckout() {
-    // let IntergerValueqUantity = parseInt(ProductQuantity.value);
-    let InIntergerValuePrice = parseInt(PriceID) + '.00';
-    PayoutAmount.value = InIntergerValuePrice;
-    /* 
+    console.log('quantity is: ' + IntGetQuantity);
+    console.log('size is: ' + IntGetSize);
     
-    try {
+    if (GetQuantity.value == "" || GetSize.value == "") {
+        console.log('error getting value');
         
-        if (IntergerValueqUantity < 1) {
-            alert("Please select a valid quantity");
-            ProductQuantity.value = 1;
-            PayoutAmount.value = InIntergerValuePrice;
+    } else {
+        if (GetQuantity.value == "") {
+            PayAmount.value = parseInt(1 * IntergerValuePrice) + '.00';
         } else {
-            let CheckoutPrice = InIntergerValuePrice;
-            PayoutAmount.value = CheckoutPrice;
+            PayAmount.value = parseInt(IntGetQuantity * IntergerValuePrice) + '.00';
         }
-    } catch (error) {
-        console.log(error);
     }
-    
-    */
     
     
 }
+
+
 
 function SquadPay() {
     const squadInstance = new squad({
@@ -122,7 +87,7 @@ function SquadPay() {
       email: document.getElementById("email-address").value,
       amount: document.getElementById("amount").value * 100,
       //Enter amount in Naira or Dollar (Base value Kobo/cent already multiplied by 100)
-      currency_code: "USD"
+      currency_code: "NGN"
     });
     squadInstance.setup();
     squadInstance.open();

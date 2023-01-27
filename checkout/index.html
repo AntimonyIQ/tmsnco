@@ -47,7 +47,50 @@
                     <h5 class="text-center">make payments</h5>
 
                     <div class="table-data" id="table-data">
-                        
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-view">
+                                            <div id="tbl">
+                                                
+                                            </div>
+                                            <div class="all-name-price">
+                                                <div class="all-name">
+                                                    <p id="AllName"></p>
+                                                </div>
+                                                <div class="all-description">
+                                                    <p id="AllDescription"></p>
+                                                </div>
+                                                <form class="" accept-charset="utf-8">
+                                                    <div class="quantity">
+                                                        <label for="quantity">Quantity</label>
+                                                        <input type="tel" name="quantityx" id="quantityx" class="form-control" value="" placeholder="1 - 28" maxlength="2">
+                                                    </div>
+                                                    <div class="size">
+                                                        <label for="size">Size</label>
+                                                        <select class="form-control" required name="size" id="sizex">
+                                                            <option value="10">10</option>
+                                                            <option value="12">12</option>
+                                                            <option value="14">14</option>
+                                                            <option value="16">16</option>
+                                                            <option value="18">18</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                                <div class="all-price">
+                                                    <p id="AllPrice"></p>
+                                                </div>
+                                            </div>
+                                            <div class="expand-product">
+                                                <button type="button" class="paymnt" onclick="return UpdateCheckout();">Update checkout</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     
                     <div class="chechout-form">
@@ -78,7 +121,7 @@
                                     <input type="tel" name="phone" id="phone" class="form-control" required value="">
                                 </div>
                                 <div class="col-lg-4">
-                                    <label for="amount">Payout Amount:</label>
+                                    <label for="amount">Payout Amount (USD):</label>
                                     <input type="tel" name="amount" id="amount" class="form-control" required disabled value="0.00">
                                 </div>
                                 
