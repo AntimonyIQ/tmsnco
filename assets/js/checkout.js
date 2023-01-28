@@ -1,3 +1,6 @@
+// quantityx
+// var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
+
 var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
 var currency_url = 'https://api.currencyapi.com/v3/latest?apikey=7mlGm0bJlisc3xM1lE1bBS3VE9kFdzYXmhxYQG12';
 
@@ -55,6 +58,8 @@ var GetQuantity = document.getElementById('quantityx');
 var GetSize = document.getElementById('sizex');
 var PayAmount = document.getElementById('amount');
 
+document.getElementsByName('quantityx')[0].addEventListener('change', UpdateCheckout);
+
 function UpdateCheckout(arg) {
     // body...
     let IntGetQuantity = parseInt(GetQuantity.value);
@@ -89,7 +94,7 @@ function UpdateCheckout(arg) {
                     let Payment_value = parseFloat(IntGetQuantity * IntergerValuePrice);
                     let converted_overall = parseFloat(Payment_value * currency_rate);
                     console.log(converted_overall.toLocaleString("en-US"));
-                    PayAmount.value = converted_overall.toLocaleString("en-US");
+                    PayAmount.value = parseInt(converted_overall) + '.00';
                 })
             
         }
