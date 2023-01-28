@@ -1,4 +1,6 @@
 var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
+var currency_url = 'https://api.currencyapi.com/v3/latest?apikey=7mlGm0bJlisc3xM1lE1bBS3VE9kFdzYXmhxYQG12';
+
 
 var checkoutTable = document.getElementById("table-data");
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -66,9 +68,30 @@ function UpdateCheckout(arg) {
         
     } else {
         if (GetQuantity.value == "") {
-            PayAmount.value = parseInt(1 * IntergerValuePrice) + '.00';
+            fetch(currency_url)
+                .then(function(res) { 
+                    return res.json();
+                }) 
+                .then(function(data) {
+                    console.log(data.data);
+                    PayAmount.value = parseInt(1 * IntergerValuePrice) + '.00';
+                })
+            
         } else {
-            PayAmount.value = parseInt(IntGetQuantity * IntergerValuePrice) + '.00';
+            fetch(currency_url)
+                .then(function(res) { 
+                    return res.json();
+                }) 
+                .then(function(data) {
+                    console.log(data.data.CAD.value);
+                    let currency_rate = parseFloat(data.data.NGN.value) / parseFloat(data.data.CAD.value);
+                    // console.log(currency_rate);
+                    let Payment_value = parseFloat(IntGetQuantity * IntergerValuePrice);
+                    let converted_overall = parseFloat(Payment_value * currency_rate);
+                    console.log(converted_overall.toLocaleString("en-US"));
+                    PayAmount.value = converted_overall.toLocaleString("en-US");
+                })
+            
         }
     }
     
