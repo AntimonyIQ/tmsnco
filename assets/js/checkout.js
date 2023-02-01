@@ -1,7 +1,7 @@
 // quantityx
 // var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
 
-var url = 'https://antimonyiq.github.io/tmsnco/assets/json/all.json';
+var url = 'https://tmsncolifestyle.store/assets/json/all.json';
 var currency_url = 'https://api.currencyapi.com/v3/latest?apikey=7mlGm0bJlisc3xM1lE1bBS3VE9kFdzYXmhxYQG12';
 
 
